@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--wb-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="wb" spacing="0.0" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label width="122.5" alignment="left" text="这是一个demo" textAlignment="center" id="oBU-oS-JlZ">
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <group width="1" height="1" alignment="left" layout="vertical" radius="20" spacing="10" id="orM-o9-K93">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" image="shoucang.png" id="esL-jE-en0"/>
+                                <imageView alignment="center" verticalAlignment="center" image="shoucang.png" id="GFY-CZ-fLU"/>
+                                <imageView alignment="center" image="shoucang.png" id="uK6-Bj-Mzf"/>
+                                <imageView alignment="center" image="shoucang.png" contentMode="scaleAspectFit" id="N4O-BL-8K1"/>
+                                <imageView alignment="center" image="shoucang.png" id="Ohz-SQ-ITf"/>
+                            </items>
+                            <color key="backgroundColor" red="0.4739668997" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" red="0.47396689967105265" green="0.78955078125" blue="0.19819078947368421" alpha="1" colorSpace="calibratedRGB"/>
+                    <edgeInsets key="margins" left="10" right="10" top="10" bottom="10"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="344"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
